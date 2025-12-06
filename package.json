@@ -18,8 +18,8 @@
     "next": "15.5.7",
     "nodemailer": "^7.0.5",
     "nodemailer-sendgrid-transport": "^0.2.0",
-    "react": "19.1.2",
-    "react-dom": "^19.1.1",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
     "react-tabs": "^6.0.2",
     "sass": "^1.70.0",
     "sharp": "^0.34.3",
@@ -33,7 +33,6 @@
     "@types/react-dom": "^19.1.7",
     "eslint": "^9.32.0",
     "eslint-config-next": "15.5.7",
-    
     "typescript": "^5"
   }
 }
