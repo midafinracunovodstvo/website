@@ -1,10 +1,15 @@
 "use client";
 
 import React from "react";
+import {ServiceData} from "../../../libs/services";
 
 // import singleServiceImg from "../../../public/images/services/single-service.jpg";
 
-const ServiceDetailsContent: React.FC = ({ service }: any) => {
+type Props = {
+  service: ServiceData;
+};
+
+const ServiceDetailsContent: React.FC<Props> = ({ service }) => {
   return (
     <>
       <div className="services-details-area ptb-100">
