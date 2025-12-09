@@ -22,7 +22,12 @@ const Footer: React.FC = () => {
               >
                 <div className="logo">
                   <Link href="/">
-                    <Image src={logo} alt="Logo" width={150} height={40} />
+                    <Image
+                      src="/images/logo_midafin_white.svg"
+                      alt="Logo"
+                      width={150}
+                      height={40}
+                    />
                   </Link>
                 </div>
 

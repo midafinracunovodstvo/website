@@ -65,7 +65,7 @@ const MainBanner: React.FC = () => {
                       Uređene finansije, jasni izveštaji i stabilan sistem koji
                       podržava rast vašeg poslovanja. Dugogodišnje iskustvo u
                       radu sa malim, srednjim i velikim pravnim licima. Usluge
-                      pružamo u ERP sistemu Pantheon, uz stalnu komunikaciju i
+                      pružamo u <span className="bold d-inline">ERP Pantheon-u</span>, uz stalnu komunikaciju i
                       dostupnost klijentima.
                     </p>
 
