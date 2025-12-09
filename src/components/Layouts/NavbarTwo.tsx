@@ -8,7 +8,8 @@ import MegaMenu from "./MegaMenu";
 import { menus } from "../../../libs/menus";
 
 import logo from "../../../public/images/logo.png";
-import whiteLogo from "../../../public/images/logo-white.png";
+// import whiteLogo from "../../../public/images/logo_midafin.png";
+import whiteLogo from "../../../public/images/logo_midafin.svg";
 
 const NavbarTwo: React.FC = () => {
   const [menu, setMenu] = useState<boolean>(true);
@@ -42,14 +43,14 @@ const NavbarTwo: React.FC = () => {
           <div className="container-fluid">
             <Link href="/" className="navbar-brand">
               <Image
-                src={logo}
+                src="/images/logo_midafin_white.svg"
                 className="black-logo"
                 alt="logo"
                 width={150}
                 height={40}
               />
               <Image
-                src={whiteLogo}
+                src="/images/logo_midafin_black.svg"
                 className="white-logo"
                 alt="logo"
                 width={150}
