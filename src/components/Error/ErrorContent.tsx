@@ -13,15 +13,14 @@ const ErrorContent: React.FC = () => {
         <div className="container">
           <div className="error-content">
             <Image src={errorImg} alt="Error" width={810} height={448} />
-            <h3>Error 404 : page not found</h3>
+            <h3>Greška 404 : stranica nije pronađena</h3>
             <p>
-              The page you are looking for might have been removed had its name
-              changed or is temporarily unavailable.
+              Stranica koju tražite je možda uklonjena, jer joj je promenjeno ime ili je privremeno nedostupna.
             </p>
 
             <div className="back-btn">
               <Link href="/" className="btn btn-primary">
-                Go Back Home
+                Početna
               </Link>
             </div>
           </div>
