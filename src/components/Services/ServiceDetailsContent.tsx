@@ -29,28 +29,22 @@ const ServiceDetailsContent: React.FC<Props> = ({ service }) => {
                 <h3>Process rada: </h3>
                 <ul>
                   <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor.
+                    Pružamo uslugu vođenja poslovnih knjiga uz izradu i predaju završnog računa i poreskog bilansa.
                   </li>
                   <li>
-                    Creative Team Sed ut perspiciatis unde omnis iste natus
-                    error sit voluptatem.
+                    Zajedno sa vama, koji poznajete svoje poslovanje, formulišemo izveštaje koji su Vam potrebni za praćenje poslovanja.
                   </li>
                   <li>
-                    Branding But I must explain to you how all this mistaken
-                    idea of denouncing.
+                    Na raspolaganju smo pravnim licima koja žele da izmeste obračun zarada, vođenje evidencije odsustva i administriranje zaposleni.
                   </li>
                   <li>
-                    Clean Code At vero eos et accusamus et iusto odio
-                    dignissimos ducimus qui.
+                    Dnevno smo na raspolaganju klijentima ukoliko im treba savet u vezi poreskih obaveza ili imaju nedoumicu kako će se neka poslovna aktivnost poreski tretirati.
                   </li>
                   <li>
-                    UX/UI Friendly On the other hand, we denounce with righteous
-                    indignation.
+                    Midafin je potpisala ugovor sa advokatskom kancelarijom kako bi svojim klijentima obezbedila osnovne pravne savete.
                   </li>
                   <li>
-                    24/7 Support There are many variations of passages of Lorem
-                    Ipsum available.
+                    Bazirani smo na poslovanju bez skrivenih troškova. U cenu su uključene sve redovne obaveze – prijave i odjave zaposlenih, statistički izveštaji, poreske prijave i redovna komunikacija sa institucijama.
                   </li>
                 </ul>
               </div>
