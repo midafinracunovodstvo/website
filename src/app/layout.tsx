@@ -3,7 +3,7 @@ import "../../public/styles/bootstrap.min.css";
 import "../../public/styles/animate.min.css";
 import "animate.css";
 import "../../public/styles/fontawesome.min.css";
-import "../../public/styles/pe-icon-7-stroke.css"; 
+import "../../public/styles/pe-icon-7-stroke.css";
 import "swiper/css";
 import "swiper/css/bundle";
 
@@ -35,10 +35,11 @@ import { Inter, Saira } from "next/font/google";
 import AosAnimation from "@/components/Layouts/AosAnimation";
 import GoTop from "@/components/Layouts/GoTop";
 // import RtlMode from "@/components/Layouts/RtlMode";
+import Script from "next/script";
 
 // For all body text font
 const inter = Inter({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
@@ -52,7 +53,8 @@ const saira = Saira({
 });
 
 export const metadata: Metadata = {
-  title: "Pungent - React Nextjs Multipurpose Startup & Digital Agency Template",
+  title:
+    "Pungent - React Nextjs Multipurpose Startup & Digital Agency Template",
   description: "React Nextjs Multipurpose Startup & Digital Agency Template",
 };
 
@@ -62,7 +64,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="sr">
+      <head>
+        {/* Google tag (gtag.js) - Google Ads */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17792393342"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-ads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17792393342');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.variable} ${saira.variable}`}>
         {children}
 

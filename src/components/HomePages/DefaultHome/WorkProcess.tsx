@@ -20,47 +20,47 @@ interface WorkProcessData {
 
 const workProcessData: WorkProcessData[] = [
   {
-    title: "Our Work Process",
+    title: "Naš proces poslovanja",
     shortText:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Jasan, efikasan tok usluge od upita do realizacije.",
     image: "/images/man-with-mobile.png",
     circleImage: "/images/circle.png",
 
     list: [
       {
         iconName: "pe-7s-display1",
-        title: "Surface",
-        text: "Visual Design",
+        title: "ERP Pantheon",
+        text: "Informacioni sistem",
         aosDelay: "100",
       },
       {
         iconName: "pe-7s-display2",
-        title: "Skeleton",
-        text: "Wireframes",
+        title: "Korektnost",
+        text: "Fer odnos",
         aosDelay: "200",
       },
       {
         iconName: "pe-7s-airplay",
-        title: "Structure",
-        text: "Screen Flow",
+        title: "Preciznost",
+        text: "U svakom pogledu",
         aosDelay: "300",
       },
       {
         iconName: "pe-7s-note2",
-        title: "Scope",
-        text: "Requirements",
+        title: "Komunikacija",
+        text: "Direktna razmena",
         aosDelay: "400",
       },
       {
         iconName: "pe-7s-light",
-        title: "User Research",
-        text: "User Research",
+        title: "Jasna cena",
+        text: "Transparentno",
         aosDelay: "500",
       },
       {
         iconName: "pe-7s-sun",
-        title: "Implement",
-        text: "Lunch/Analyse",
+        title: "Dostupnost",
+        text: "U svakom trenutku",
         aosDelay: "600",
       },
     ],
