@@ -20,42 +20,41 @@ import { Inter, Saira } from "next/font/google";
 import AosAnimation from "@/components/Layouts/AosAnimation";
 import GoTop from "@/components/Layouts/GoTop";
 import Script from "next/script";
+import ClientAnalytics from "@/components/ClientAnalytics/ClientAnalytics";
 
 // For all body text font
 const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
+  display: "swap"
 });
 
 // For all heading font
 const saira = Saira({
   subsets: ["latin"],
   variable: "--font-saira",
-  display: "swap",
+  display: "swap"
 });
 
 export const metadata: Metadata = {
   title: "MiDaFin - Zvanična prezentacija ",
-  description: "Zvanična prezentacija knjigovodstvena agencija MiDaFin.doo",
+  description: "Zvanična prezentacija knjigovodstvena agencija MiDaFin.doo"
 };
 
-// GA4 measurement ID (isti kao u web streamu)
-const GA_MEASUREMENT_ID = "G-4X52W0ZPK6";
-
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
   return (
     <html lang="sr">
       <head />
       <body className={`${inter.variable} ${saira.variable}`}>
-        {/* Google Tag Manager (i dalje, za buduće tagove) */}
+        {/* Google Tag Manager */}
         {gtmId && (
           <Script
             id="gtm-script"
@@ -67,11 +66,13 @@ export default function RootLayout({
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                 })(window,document,'script','dataLayer','${gtmId}');
-              `,
+              `
             }}
           />
         )}
+        {/* End Google Tag Manager */}
 
+        {/* Google Tag Manager (noscript) */}
         {gtmId && (
           <noscript>
             <iframe
@@ -82,34 +83,37 @@ export default function RootLayout({
             />
           </noscript>
         )}
+        {/* End Google Tag Manager (noscript) */}
 
-        {/* --- GA4 DIREKTNA INTEGRACIJA (bez GTM) --- */}
-        <Script
-          id="ga4-src"
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-
-        <Script
-          id="ga4-config"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}', {
-                send_page_view: true
-              });
-            `,
-          }}
-        />
-        {/* --- kraj GA4 --- */}
+        {/* GA4 – isto kao na starom projektu */}
+        {gaId && (
+          <>
+            <Script
+              id="ga4-src"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}', {
+                  send_page_view: false
+                });
+              `}
+            </Script>
+          </>
+        )}
+        {/* End GA4 */}
 
         {children}
 
         <AosAnimation />
         <GoTop />
+
+        {/* SPA pageview tracking */}
+        <ClientAnalytics />
       </body>
     </html>
   );
