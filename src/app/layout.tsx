@@ -19,7 +19,6 @@ import type { Metadata } from "next";
 import { Inter, Saira } from "next/font/google";
 import AosAnimation from "@/components/Layouts/AosAnimation";
 import GoTop from "@/components/Layouts/GoTop";
-// import RtlMode from "@/components/Layouts/RtlMode";
 import Script from "next/script";
 
 // For all body text font
@@ -27,31 +26,33 @@ const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
+  display: "swap"
 });
 
 // For all heading font
 const saira = Saira({
   subsets: ["latin"],
   variable: "--font-saira",
-  display: "swap",
+  display: "swap"
 });
 
 export const metadata: Metadata = {
   title: "MiDaFin - Zvanična prezentacija ",
-  description: "Zvanična prezentacija knjigovodstvena agencija MiDaFin.doo",
+  description: "Zvanična prezentacija knjigovodstvena agencija MiDaFin.doo"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-  console.log("gtmId", gtmId);
+
   return (
     <html lang="sr">
-      <head>
+      {/* Next sam generiše <head>, ne ubacujemo ništa ručno ovde */}
+      <head />
+      <body className={`${inter.variable} ${saira.variable}`}>
         {/* Google Tag Manager */}
         {gtmId && (
           <Script
@@ -64,13 +65,12 @@ export default function RootLayout({
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                 })(window,document,'script','dataLayer','${gtmId}');
-              `,
+              `
             }}
           />
         )}
         {/* End Google Tag Manager */}
-      </head>
-      <body className={`${inter.variable} ${saira.variable}`}>
+
         {/* Google Tag Manager (noscript) */}
         {gtmId && (
           <noscript>
@@ -87,9 +87,7 @@ export default function RootLayout({
         {children}
 
         <AosAnimation />
-
         <GoTop />
-
       </body>
     </html>
   );
