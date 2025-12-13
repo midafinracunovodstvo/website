@@ -40,11 +40,6 @@ const AboutContent: React.FC = () => {
 
   return (
     <>
-      <FsLightbox
-        toggler={toggler}
-        sources={["https://www.youtube.com/embed/bk7McNUjWgw"]}
-      />
-
       <div className="about-area ptb-100">
         <div className="container">
           <div className="row align-items-center">
@@ -65,7 +60,7 @@ const AboutContent: React.FC = () => {
                   }}
                 >
                   <Image
-                    src="/images/about-img2.jpg"
+                    src="/images/home_page_about_us.jpg"
                     alt="image"
                     className="rounded-10"
                     width={500}
@@ -75,15 +70,6 @@ const AboutContent: React.FC = () => {
                       transition: "transform 0.3s ease",
                     }}
                   />
-                </div>
-
-                <div className="video-box">
-                  <div
-                    className="video-btn"
-                    onClick={() => setToggler(!toggler)}
-                  >
-                    <i className="fa-solid fa-play"></i>
-                  </div>
                 </div>
               </div>
             </div>

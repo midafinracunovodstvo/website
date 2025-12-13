@@ -17,8 +17,8 @@ interface FormState {
 
 const alertContent = () => {
   MySwal.fire({
-    title: "Congratulations!",
-    text: "Your message was successfully sent and we will get back to you soon.",
+    title: "Čestitamo!",
+    text: "Vaša poruka je poslata. Uskoro ćemo se javiti. Hvala!",
     icon: "success",
     timer: 2000,
     timerProgressBar: true,
@@ -57,10 +57,11 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const url = `${baseUrl}/api/contact`;
+      const url = `/api/contact`;
       const { name, email, number, subject, message } = contact;
       const payload = { name, email, number, subject, message };
       const response = await axios.post(url, payload);
+      console.log('response', response);
       console.log(response.data);
       setContact(INITIAL_STATE);
       alertContent();

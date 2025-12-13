@@ -68,7 +68,7 @@ const About: React.FC = () => {
                 }}
               >
                 <Image
-                  src="/images/about-img1.jpg"
+                  src="/images/home_page_about_us.jpg"
                   alt="image"
                   className="rounded-10"
                   width={500}
@@ -78,15 +78,6 @@ const About: React.FC = () => {
                     transition: "transform 0.3s ease",
                   }}
                 />
-
-                <div className="video-box">
-                  <div
-                    onClick={() => setToggler(!toggler)}
-                    className="video-btn"
-                  >
-                    <i className="fa-solid fa-play"></i>
-                  </div>
-                </div>
               </div>
             </div>
 

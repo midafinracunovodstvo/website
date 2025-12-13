@@ -12,7 +12,7 @@ export default function Page() {
     <ContactPageConversion />
       <NavbarTwo />
 
-      <PageBanner pageTitle="Kontaktirajte nas" BGImage="/images/page-banner1.jpg" />
+      <PageBanner pageTitle="Kontaktirajte nas" BGImage="/images/services_category_back.jpg" />
 
       <ContactInfo />
 

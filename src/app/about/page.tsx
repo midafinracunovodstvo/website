@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <NavbarTwo />
 
-      <PageBanner pageTitle="O nama" BGImage="/images/page-banner1.jpg" />
+      <PageBanner pageTitle="O nama" BGImage="/images/services_category_back.jpg" />
 
       <AboutContent />
 
