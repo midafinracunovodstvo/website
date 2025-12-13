@@ -54,8 +54,8 @@ const saira = Saira({
 
 export const metadata: Metadata = {
   title:
-    "Pungent - React Nextjs Multipurpose Startup & Digital Agency Template",
-  description: "React Nextjs Multipurpose Startup & Digital Agency Template",
+    "MiDaFin - Zvanična prezentacija ",
+  description: "Zvanična prezentacija knjigovodstvena agencija MiDaFin.doo",
 };
 
 export default function RootLayout({

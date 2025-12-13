@@ -11,7 +11,7 @@ export default function Page() {
     <>
       <NavbarTwo />
 
-      <PageBanner pageTitle="Naše cene" BGImage="/images/page-banner4.jpg" />
+      <PageBanner pageTitle="Naše cene" BGImage="/images/services_category_back.jpg" />
 
       {/* <PricingStyleTwo /> */}
       <PricingStyleThree />
