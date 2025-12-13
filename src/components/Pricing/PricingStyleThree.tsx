@@ -7,10 +7,10 @@ const pricingData = [
   {
     title: "Start",
     price: "140",
+    originalPrice: "180",
     duration: "/Mesečno",
     shortText: "do 3 zaposlena, do 40 faktura",
     aosDelay: "200",
-
     priceList: [
       { title: "Knjiženje dokumentacije" },
       { title: "Izrada završnog računa" },
@@ -24,10 +24,10 @@ const pricingData = [
   {
     title: "Srednji",
     price: "240",
+    originalPrice: "300",
     duration: "/Mesečno",
     shortText: "do 7 zaposlena, do 80 faktura",
     aosDelay: "200",
-
     priceList: [
       { title: "Knjiženje dokumentacije" },
       { title: "Izrada završnog računa" },
@@ -41,10 +41,10 @@ const pricingData = [
   {
     title: "Premium",
     price: "340",
+    originalPrice: "420",
     duration: "/Mesečno",
     shortText: "do 15 zaposlena, do 140 faktura",
     aosDelay: "200",
-
     priceList: [
       { title: "Knjiženje dokumentacije" },
       { title: "Izrada završnog računa" },
@@ -89,10 +89,27 @@ const PricingStyleThree: React.FC = () => {
                     <div className="pricing-header">
                       <h3>{value.title}</h3>
                     </div>
-
+                    
                     <div className="price">
                       <sup>&euro;</sup>
-                      {value.price} <sub>{value.duration}</sub>
+                      {value.price}
+
+                      {value.originalPrice ? (
+                        <span
+                          style={{
+                            marginLeft: "10px",
+                            color: "#9ca3af", // siva
+                            textDecoration: "line-through",
+                            fontSize: "0.95em",
+                            fontWeight: 500,
+                          }}
+                        >
+                          <sup>&euro;</sup>
+                          {value.originalPrice}
+                        </span>
+                      ) : null}
+
+                      <sub>{value.duration}</sub>
                       <p className="info-text">{value.shortText}</p>
                     </div>
 
@@ -106,9 +123,6 @@ const PricingStyleThree: React.FC = () => {
                     </ul>
 
                     <div className="btn-box">
-                      {/* <Link href="#" className="btn btn-primary">
-                        Select the plan
-                      </Link> */}
                       <Link
                         href="/contact-us/"
                         className="btn btn-primary"
@@ -125,7 +139,8 @@ const PricingStyleThree: React.FC = () => {
           </div>
           <div className="row justify-content-center">
             <div className="col-12">
-              Promo cene važe za klijente koji potpišu ugovor do kraja januara 2026 !
+              Promo cene važe za klijente koji potpišu ugovor do kraja januara
+              2026 !
             </div>
           </div>
         </div>
