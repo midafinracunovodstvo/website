@@ -20,6 +20,7 @@ import { Inter, Saira } from "next/font/google";
 import AosAnimation from "@/components/Layouts/AosAnimation";
 import GoTop from "@/components/Layouts/GoTop";
 import Script from "next/script";
+import ClientAnalytics from "@/components/ClientAnalytics/ClientAnalytics";
 
 // For all body text font
 const inter = Inter({
@@ -47,10 +48,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
   return (
     <html lang="sr">
-      {/* Next sam generiše <head>, ne ubacujemo ništa ručno ovde */}
       <head />
       <body className={`${inter.variable} ${saira.variable}`}>
         {/* Google Tag Manager */}
@@ -84,10 +85,35 @@ export default function RootLayout({
         )}
         {/* End Google Tag Manager (noscript) */}
 
+        {/* GA4 – isto kao na starom projektu */}
+        {gaId && (
+          <>
+            <Script
+              id="ga4-src"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}', {
+                  send_page_view: false
+                });
+              `}
+            </Script>
+          </>
+        )}
+        {/* End GA4 */}
+
         {children}
 
         <AosAnimation />
         <GoTop />
+
+        {/* SPA pageview tracking */}
+        <ClientAnalytics />
       </body>
     </html>
   );
