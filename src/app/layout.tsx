@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Script from "next/script";
 
 import "../../public/styles/bootstrap.min.css";
@@ -10,8 +10,11 @@ import "swiper/css";
 import "swiper/css/bundle";
 
 import "../../public/styles/app-home-page.css";
+
+// Global Style
 import "../../public/styles/style.css";
 import "../../public/styles/responsive.css";
+// Global RTL Style
 import "../../public/styles/rtl.css";
 
 import type { Metadata } from "next";
@@ -20,6 +23,7 @@ import AosAnimation from "@/components/Layouts/AosAnimation";
 import GoTop from "@/components/Layouts/GoTop";
 import ClientAnalytics from "@/components/ClientAnalytics/ClientAnalytics";
 
+// For all body text font
 const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
@@ -27,6 +31,7 @@ const inter = Inter({
   display: "swap",
 });
 
+// For all heading font
 const saira = Saira({
   subsets: ["latin"],
   variable: "--font-saira",
@@ -40,11 +45,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
-  const TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID;
-  const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+}>) {
+  // AW-... (Google Ads / Google tag loader)
+  const TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "";
+  // G-... (GA4 measurement id)
+  const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
 
   return (
     <html lang="sr" suppressHydrationWarning>
@@ -63,10 +70,10 @@ export default function RootLayout({
 
                 gtag('js', new Date());
 
-                // Google Ads tag (glavni tag)
+                // Google tag (Ads) loader config
                 gtag('config', '${TAG_ID}');
 
-                // GA4 (analytics) destination
+                // GA4 destination config (disable auto page_view; SPA sends it manually)
                 ${
                   GA_ID
                     ? `gtag('config', '${GA_ID}', { send_page_view: false });`
@@ -80,9 +87,14 @@ export default function RootLayout({
 
       <body className={`${inter.variable} ${saira.variable}`}>
         {children}
+
         <AosAnimation />
         <GoTop />
-        <ClientAnalytics />
+
+        {/* SPA pageview tracking (useSearchParams requires Suspense) */}
+        <Suspense fallback={null}>
+          <ClientAnalytics />
+        </Suspense>
       </body>
     </html>
   );
