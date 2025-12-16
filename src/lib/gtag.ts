@@ -1,22 +1,22 @@
-export const GA_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
 
-// Pageview event
 export const pageview = (url: string) => {
   if (!GA_MEASUREMENT_ID) return;
   if (typeof window === "undefined") return;
 
-  (window as any).gtag?.("config", GA_MEASUREMENT_ID, {
-    page_path: url
+  // šaljemo page_view ručno (SPA), pošto smo u init-u stavili send_page_view:false
+  (window as any).gtag?.("event", "page_view", {
+    page_path: url,
+    page_location: window.location.href,
+    page_title: document.title,
   });
 };
 
-// Generic event helper (ako ti zatreba)
 export const event = ({
   action,
   category,
   label,
-  value
+  value,
 }: {
   action: string;
   category?: string;
@@ -29,6 +29,6 @@ export const event = ({
   (window as any).gtag?.("event", action, {
     event_category: category,
     event_label: label,
-    value
+    value,
   });
 };

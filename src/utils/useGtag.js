@@ -1,14 +1,19 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import * as gtag from "@/lib/gtag";
 
 export default function useGtag() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (!pathname) return;
-    gtag.pageview(pathname);
-  }, [pathname]);
+
+    const qs = searchParams?.toString();
+    const url = qs ? `${pathname}?${qs}` : pathname;
+
+    gtag.pageview(url);
+  }, [pathname, searchParams]);
 }
