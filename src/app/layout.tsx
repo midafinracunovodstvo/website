@@ -55,7 +55,7 @@ export default function RootLayout({
       <head />
       <body className={`${inter.variable} ${saira.variable}`}>
         {/* Google Tag Manager */}
-        {gtmId && (
+        {/* {gtmId && (
           <Script
             id="gtm-script"
             strategy="afterInteractive"
@@ -69,11 +69,11 @@ export default function RootLayout({
               `
             }}
           />
-        )}
+        )} */}
         {/* End Google Tag Manager */}
 
         {/* Google Tag Manager (noscript) */}
-        {gtmId && (
+        {/* {gtmId && (
           <noscript>
             <iframe
               src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
@@ -82,11 +82,11 @@ export default function RootLayout({
               style={{ display: "none", visibility: "hidden" }}
             />
           </noscript>
-        )}
+        )} */}
         {/* End Google Tag Manager (noscript) */}
 
         {/* GA4 – isto kao na starom projektu */}
-        {gaId && (
+        {/* {gaId && (
           <>
             <Script
               id="ga4-src"
@@ -104,7 +104,7 @@ export default function RootLayout({
               `}
             </Script>
           </>
-        )}
+        )} */}
         {/* End GA4 */}
 
         {children}
@@ -114,6 +114,20 @@ export default function RootLayout({
 
         {/* SPA pageview tracking */}
         <ClientAnalytics />
+
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
