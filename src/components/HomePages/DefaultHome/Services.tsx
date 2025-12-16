@@ -17,7 +17,7 @@ const servicesData: ServiceData[] = [
     title: "Računovodstvo",
     shortText:
       "Pružamo uslugu vođenja poslovnih knjiga uz izradu i predaju završnog računa i poreskog bilansa.",
-    viewDetails: "/services/service-details/",
+    viewDetails: "/services/racunovodstvo/",
     aosDelay: "100",
   },
   {
@@ -25,7 +25,7 @@ const servicesData: ServiceData[] = [
     title: "Interno izveštavanje",
     shortText:
       "Zajedno sa vama, koji poznajete svoje poslovanje, formulišemo izveštaje koji su Vam potrebni za praćenje poslovanja firme i koje dobijate u dogovorenom vremenskom intervalu.",
-    viewDetails: "/services/service-details/",
+    viewDetails: "/services/interno-izvestavanje/",
     aosDelay: "200",
   },
   {
@@ -33,7 +33,7 @@ const servicesData: ServiceData[] = [
     title: "Obračun zarada",
     shortText:
       "Na raspolaganju smo pravnim licima koja žele da izmeste obračun zarada, vođenje evidencije odsustva i administriranje zaposleni.",
-    viewDetails: "/services/service-details/",
+    viewDetails: "/services/obracun-zarada/",
     aosDelay: "300",
   },
   {
@@ -41,7 +41,7 @@ const servicesData: ServiceData[] = [
     title: "Poresko savetovanje",
     shortText:
       "Dnevno smo na raspolaganju klijentima ukoliko im treba savet u vezi poreskih obaveza ili imaju nedoumicu kako će se neka poslovna aktivnost poreski tretirati. ",
-    viewDetails: "/services/service-details/",
+    viewDetails: "/services/poresko-savetovanje/",
     aosDelay: "400",
   },
   {
@@ -49,7 +49,7 @@ const servicesData: ServiceData[] = [
     title: "Pravne usluge",
     shortText:
       "Midafin je potpisala ugovor sa advokatskom kancelarijom kako bi svojim klijentima obezbedila osnovne pravne savete.Takođe naši klijenti mogu ostvariti popust u slučaju potrebe angažovanja advokatske kancelarije u pravnim poslovima.",
-    viewDetails: "/services/service-details/",
+    viewDetails: "/services/pravne-usluge/",
     aosDelay: "500",
   },
   {
@@ -57,7 +57,7 @@ const servicesData: ServiceData[] = [
     title: "Cene usluga",
     shortText:
       "Bazirani smo na poslovanju bez skrivenih troškova. U cenu su uključene sve redovne obaveze – prijave i odjave zaposlenih, statistički izveštaji, poreske prijave i redovna komunikacija sa institucijama.",
-    viewDetails: "/services/service-details/",
+    viewDetails: "/services/cene-usluga/",
     aosDelay: "600",
   },
 ];
