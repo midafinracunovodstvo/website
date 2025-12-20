@@ -7,7 +7,7 @@ const pricingData = [
   {
     title: "Start",
     price: "140",
-    originalPrice: "180",
+    originalPrice: "170",
     duration: "/Mesečno",
     shortText: "do 3 zaposlena, do 40 faktura",
     aosDelay: "200",
@@ -24,7 +24,7 @@ const pricingData = [
   {
     title: "Srednji",
     price: "240",
-    originalPrice: "300",
+    originalPrice: "280",
     duration: "/Mesečno",
     shortText: "do 7 zaposlena, do 80 faktura",
     aosDelay: "200",
@@ -41,7 +41,7 @@ const pricingData = [
   {
     title: "Premium",
     price: "340",
-    originalPrice: "420",
+    originalPrice: "380",
     duration: "/Mesečno",
     shortText: "do 15 zaposlena, do 140 faktura",
     aosDelay: "200",
