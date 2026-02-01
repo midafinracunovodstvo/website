@@ -9,13 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.1.6",
     "@types/aos": "^3.0.7",
     "@types/fslightbox-react": "^1.7.7",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "axios": "^1.11.0",
     "fslightbox-react": "^1.7.6",
-    "next": "15.5.7",
+    "next": "^16.1.6",
     "nodemailer": "^7.0.5",
     "nodemailer-sendgrid-transport": "^0.2.0",
     "react": "19.2.1",

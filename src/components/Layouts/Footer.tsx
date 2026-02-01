@@ -111,6 +111,16 @@ const Footer: React.FC = () => {
                   <li>
                     <Link href="/terms-conditions/">Uslovi korišćenja</Link>
                   </li>
+                  <li>
+                    <a href="/pdf/APR.pdf" target="_blank">
+                      APR
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/pdf/RESENJE_KOMORE.pdf" target="_blank">
+                      Rešenje komore
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -126,8 +136,9 @@ const Footer: React.FC = () => {
 
                 <ul className="get-in-touch">
                   <li>
-                    <i className="fa-solid fa-location-dot"></i> Kumodraška 76,
-                    Beograd, <br /> BG 11000, SRB
+                    <i className="fa-solid fa-location-dot"></i> Omladinskih
+                    brigada 26
+                    <br /> BG 11070, SRB
                   </li>
                   <li>
                     <i className="fa-solid fa-headset"></i>

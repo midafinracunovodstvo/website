@@ -10,7 +10,7 @@ export default function Page() {
       <NavbarTwo />
 
       <PageBanner
-        pageTitle="Privacy Policy"
+        pageTitle="Politika privatnosti"
         BGImage="/images/page-banner5.jpg"
       />
 

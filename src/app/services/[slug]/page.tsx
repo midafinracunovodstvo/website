@@ -12,7 +12,6 @@ type Props = {
 const ServicePage = async ({ params }: Props) => {
   const { slug } = await params;
 
-  console.log(params);
   const service = services.find((s) => s.slug === slug);
 
   if (!service) return notFound();

@@ -82,8 +82,8 @@ export const services: ServiceData[] = [
   },
   {
     iconName: "pe-7s-users bg-ff612f",
-    title: "Cene usluga",
-    slug: "cene-usluga",
+    title: "Izrada procedura i pravilnika",
+    slug: "izrada-procedura-i-pravilnika",
     shortText:
       "Izrada procedura i pravilnika – stabilan i organizovan sistem za rast",
     content: [
@@ -148,10 +148,10 @@ export const servicesPageData: PageServiceData[] = [
   },
   {
     iconName: "pe-7s-users bg-ff612f",
-    title: "Cene usluga",
+    title: "Izrada procedura i pravilnika",
     shortText:
-      "Bazirani smo na poslovanju bez skrivenih troškova. U cenu su uključene sve redovne obaveze – prijave i odjave zaposlenih, statistički izveštaji, poreske prijave i redovna komunikacija sa institucijama.",
-    viewDetails: "/services/cene-usluga",
+      "Bazirani smo na poslovanju  bez skrivenih troškova. U cenu su uključene sve redovne obaveze – prijave i odjave zaposlenih, statistički izveštaji, poreske prijave i redovna komunikacija sa institucijama.",
+    viewDetails: "/services/izrada-procedura-i-pravilnika",
     aosDelay: "600",
   },
 ];

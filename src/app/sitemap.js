@@ -23,7 +23,7 @@ export default function sitemap() {
     "/services/obracun-zarada",
     "/services/poresko-savetovanje",
     "/services/pravne-usluge",
-    "/services/cene-usluga",
+    "/services/izrada-procedura-i-pravilnika",
     "/privacy-policy",
     "/terms-conditions",
   ];
