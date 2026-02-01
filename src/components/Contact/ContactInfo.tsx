@@ -11,6 +11,20 @@ const ContactInfo: React.FC = () => {
             <div className="col-lg-4 col-md-6">
               <div className="contact-info-box">
                 <div className="icon">
+                  <i className="pe-7s-call"></i>
+                </div>
+                <h3>Telefoni</h3>
+                <p>
+                  <a href="tel:+381642973235">+381 64 297 32 35</a>
+                </p>
+                <p>
+                  <a href="tel:+381642973235">+381 64 297 32 35</a>
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="contact-info-box">
+                <div className="icon">
                   <i className="pe-7s-mail"></i>
                 </div>
                 <h3>Mail Adresa</h3>
@@ -30,22 +44,8 @@ const ContactInfo: React.FC = () => {
                 </div>
                 <h3>Posetite nas</h3>
                 <p>
-                  Kumodraška 76 v, Voždovac <br /> Beograd 11000, SRB
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="contact-info-box">
-                <div className="icon">
-                  <i className="pe-7s-call"></i>
-                </div>
-                <h3>Telefoni</h3>
-                <p>
-                  <a href="tel:+381642973235">+381 64 297 32 35</a>
-                </p>
-                <p>
-                  <a href="tel:+381642973235">+381 64 297 32 35</a>
+                  Omladinskih brigada 26
+                  <br /> Beograd 11070, SRB
                 </p>
               </div>
             </div>

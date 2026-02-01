@@ -1,5 +1,4 @@
 import React, { Suspense } from "react";
-import Script from "next/script";
 
 import "../../public/styles/bootstrap.min.css";
 import "../../public/styles/animate.min.css";
@@ -19,9 +18,12 @@ import "../../public/styles/rtl.css";
 
 import type { Metadata } from "next";
 import { Inter, Saira } from "next/font/google";
+
 import AosAnimation from "@/components/Layouts/AosAnimation";
 import GoTop from "@/components/Layouts/GoTop";
-import ClientAnalytics from "@/components/ClientAnalytics/ClientAnalytics";
+import GtmPageView from "@/components/GtmPageView/GtmPageView";
+
+import { GoogleTagManager } from "@next/third-parties/google";
 
 // For all body text font
 const inter = Inter({
@@ -48,42 +50,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // AW-... (Google Ads / Google tag loader)
-  const TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "";
-  // G-... (GA4 measurement id)
-  const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "";
 
   return (
     <html lang="sr" suppressHydrationWarning>
-      <head>
-        {TAG_ID ? (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${TAG_ID}`}
-              strategy="beforeInteractive"
-            />
-            <Script id="gtag-init" strategy="beforeInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){window.dataLayer.push(arguments);}
-                window.gtag = window.gtag || gtag;
-
-                gtag('js', new Date());
-
-                // Google tag (Ads) loader config
-                gtag('config', '${TAG_ID}');
-
-                // GA4 destination config (disable auto page_view; SPA sends it manually)
-                ${
-                  GA_ID
-                    ? `gtag('config', '${GA_ID}', { send_page_view: false });`
-                    : ""
-                }
-              `}
-            </Script>
-          </>
-        ) : null}
-      </head>
+      {/* GTM loader (sve ostalo: GA4/Ads/events ide kroz GTM) */}
+      {GTM_ID ? <GoogleTagManager gtmId={GTM_ID} /> : null}
 
       <body className={`${inter.variable} ${saira.variable}`}>
         {children}
@@ -91,10 +63,7 @@ export default function RootLayout({
         <AosAnimation />
         <GoTop />
 
-        {/* SPA pageview tracking (useSearchParams requires Suspense) */}
-        <Suspense fallback={null}>
-          <ClientAnalytics />
-        </Suspense>
+        <GtmPageView />
       </body>
     </html>
   );

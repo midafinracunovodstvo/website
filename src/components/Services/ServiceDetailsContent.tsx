@@ -44,7 +44,7 @@ const ServiceDetailsContent: React.FC<Props> = ({ service }) => {
                     Midafin je potpisala ugovor sa advokatskom kancelarijom kako bi svojim klijentima obezbedila osnovne pravne savete.
                   </li>
                   <li>
-                    Bazirani smo na poslovanju bez skrivenih troškova. U cenu su uključene sve redovne obaveze – prijave i odjave zaposlenih, statistički izveštaji, poreske prijave i redovna komunikacija sa institucijama.
+                    Bazirani smo na poslovanju  bez skrivenih troškova. U cenu su uključene sve redovne obaveze – prijave i odjave zaposlenih, statistički izveštaji, poreske prijave i redovna komunikacija sa institucijama.
                   </li>
                 </ul>
               </div>

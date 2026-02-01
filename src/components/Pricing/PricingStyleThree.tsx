@@ -139,7 +139,7 @@ const PricingStyleThree: React.FC = () => {
           </div>
           <div className="row justify-content-center">
             <div className="col-12">
-              Promo cene važe za klijente koji potpišu ugovor do kraja januara
+              Promo cene važe za klijente koji potpišu ugovor do kraja februara
               2026 !
             </div>
           </div>
