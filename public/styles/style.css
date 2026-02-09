@@ -2783,7 +2783,7 @@ Pricing Area CSS
 .single-pricing-table .price sub {
   bottom: 2px;
   color: #4a6f8a;
-  padding-right: 5px;
+  padding: 0 5px;
   font-size: 14px;
   font-weight: 500;
 }
