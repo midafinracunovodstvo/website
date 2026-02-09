@@ -7,8 +7,8 @@ const pricingData = [
   {
     title: "Start",
     price: "140",
-    originalPrice: "170",
-    duration: "/Mesečno",
+    originalPrice: "",
+    duration: "Fiksno/Mesečno",
     shortText: "do 3 zaposlena, do 40 faktura",
     aosDelay: "200",
     priceList: [
@@ -24,8 +24,8 @@ const pricingData = [
   {
     title: "Srednji",
     price: "240",
-    originalPrice: "280",
-    duration: "/Mesečno",
+    originalPrice: "",
+    duration: "Fiksno/Mesečno",
     shortText: "do 7 zaposlena, do 80 faktura",
     aosDelay: "200",
     priceList: [
@@ -41,8 +41,8 @@ const pricingData = [
   {
     title: "Premium",
     price: "340",
-    originalPrice: "380",
-    duration: "/Mesečno",
+    originalPrice: "",
+    duration: "Fiksno/Mesečno",
     shortText: "do 15 zaposlena, do 140 faktura",
     aosDelay: "200",
     priceList: [
@@ -139,8 +139,7 @@ const PricingStyleThree: React.FC = () => {
           </div>
           <div className="row justify-content-center">
             <div className="col-12">
-              Promo cene važe za klijente koji potpišu ugovor do kraja februara
-              2026 !
+              Bez skrivenih troškova! 
             </div>
           </div>
         </div>
