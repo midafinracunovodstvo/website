@@ -13,7 +13,7 @@ const pricingData = [
     aosDelay: "200",
     priceList: [
       { title: "Knjiženje dokumentacije" },
-      { title: "Izrada završnog računa" },
+      { title: "Obračun PDV-a" },
       { title: "Obračun zarada" },
       { title: "Prijava i odjava zaposlenih" },
       { title: "Poresko savetovanje" },
@@ -30,7 +30,7 @@ const pricingData = [
     aosDelay: "200",
     priceList: [
       { title: "Knjiženje dokumentacije" },
-      { title: "Izrada završnog računa" },
+      { title: "Obračun PDV-a" },
       { title: "Obračun zarada" },
       { title: "Prijava i odjava zaposlenih" },
       { title: "Poresko savetovanje" },
@@ -47,7 +47,7 @@ const pricingData = [
     aosDelay: "200",
     priceList: [
       { title: "Knjiženje dokumentacije" },
-      { title: "Izrada završnog računa" },
+      { title: "Obračun PDV-a" },
       { title: "Obračun zarada" },
       { title: "Prijava i odjava zaposlenih" },
       { title: "Poresko savetovanje" },
