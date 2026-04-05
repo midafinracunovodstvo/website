@@ -23,7 +23,7 @@ const pricingData = [
   },
   {
     title: "Srednji",
-    price: "240",
+    price: "280",
     originalPrice: "",
     duration: "Fiksno/Mesečno",
     shortText: "do 7 zaposlena, do 80 faktura",
@@ -40,7 +40,7 @@ const pricingData = [
   },
   {
     title: "Premium",
-    price: "340",
+    price: "400",
     originalPrice: "",
     duration: "Fiksno/Mesečno",
     shortText: "do 15 zaposlena, do 140 faktura",
